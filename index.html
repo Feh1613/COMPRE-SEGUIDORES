@@ -2,122 +2,129 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>aqui.monetize</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>aq.monetize</title>
   <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f9;
-      color: #333;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://i.pinimg.com/originals/20/d4/4c/20d44c85e395208d24b0e2f6c5c5ed9a.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
     }
-
-    header {
-      background-color: #111827;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    main {
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .section h2 {
-      margin-bottom: 15px;
-      font-size: 22px;
-      color: #111827;
-    }
-
-    .preco {
-      margin: 8px 0;
-      font-size: 18px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin: 12px;
-      padding: 12px 20px;
-      background-color: #10b981;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn:hover {background-color: #059669;
-    }
-
-    .icon-links a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #374151;
-      font-size: 18px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    .icon-links a:hover {
-      color: #10b981;
-    }
-
-    .whatsapp-float {
+    #logo {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50%;
-      width: 55px;
-      height: 55px;
+      top: 20px;
+      left: 20px;
+      font-size: 28px;
+      font-weight: 700;
+      color: #10b981;
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-size: 26px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      gap: 8px;
+      user-select: none;cursor: default;
+      text-shadow: 0 0 6px rgba(16, 185, 129, 0.8);
     }
-
-    @media (max-width: 600px) {
-      .btn {
-        width: 80%;
+    #logo span {
+      font-size: 18px;
+      color: #fff;
+      text-shadow: none;
+      font-weight: 400;
+    }
+    main {
+      max-width: 450px;
+      background: rgba(0,0,0,0.7);
+      margin: 120px auto 60px;
+      border-radius: 12px;
+      padding: 30px 25px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 36px;
+      color: #10b981;
+      letter-spacing: 2px;
+      text-shadow: 0 0 8px #10b981;
+    }
+    h2 {
+      margin-bottom: 15px;
+      font-weight: 600;
+      font-size: 22px;
+      color: #fff;
+      text-shadow: 0 0 6px rgba(0,0,0,0.8);
+    }
+    .btn {
+      display: block;
+      background-color: #10b981;
+      color: white;
+      padding: 15px 0;
+      margin: 10px 0;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 18px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5);
+    }
+    .btn:hover {
+      background-color: #059669;
+    }
+    .social-links {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    .social-links a {
+      text-decoration: none;padding: 12px 0;
       }
     }
   </style>
 </head>
 <body>
-  <header>aqui.monetize</header>
+
+  <div id="logo">
+    aqui.monetize <span>📈🔥</span>
+  </div>
 
   <main>
-    <div class="section">
-      <h2>Instagram</h2>
-      <div class="preco">Tantos seguidores - R3,99</div>
-      <div class="preco">Tantos seguidores - R10,00</div>
-      <div class="preco">Tantos seguidores - R$15,00</div>
-      <div class="preco">Acima de mil? Fale conosco no WhatsApp!</div><div class="preco">Tantos seguidores - R9,00</div>
-      <div class="preco">Tantos seguidores - R12,50</div>
-      <div class="preco">Mais seguidores ou outras redes? Fale no WhatsApp!</div>
-      <a href="https://api.whatsapp.com/send?phone=5541999426478&text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20de%20seguidores%20no%20TikTok.%20Meu%20nome%20%C3%A9:%20%F0%9F%91%A8%20Meu%20@%20%C3%A9:%20%F0%9F%93%A7%20Meu%20CPF%20%C3%A9:%20%F0%9F%93%9D" class="btn" target="_blank">Fazer pedido TikTok</a>
-    </div>
+    <h1>Venda de Seguidores</h1>
 
-    <div class="section">
-      <h2>Siga nossas redes sociais</h2>
-      <div class="icon-links">
-        <a href="https://www.instagram.com/compraseguidoresof?igsh=aWlkaTVrbmsxZ215" target="_blank">Instagram</a>
-        <a href="https://tiktok.com/@aqui.monetize" target="_blank">TikTok</a>
+    <section>
+      <h2>Instagram</h2>
+      <div class="prices">
+        <p>100 seguidores — R3,99</p>
+        <p>300 seguidores — R 8,00</p>
+        <p>500 seguidores — R12,00</p>
+        <p><em>Mais seguidores? Ou dúvidas? Pelo WhatsApp!</em></p>
       </div>
+      <a href="https://api.whatsapp.com/send?phone=5541999426478   text=Ol
+    </section>
+
+    <section>
+      <h2>TikTok</h2>
+      <div class="prices">
+        <p>100 seguidores — R 3,99</p>
+        <p>300 seguidores — R9,00</p>
+        <p>500 seguidores — R 12,50</p>
+        <p><em>Mais seguidores? Ou dúvidas? Pelo WhatsApp!</em></p>
+      </div>
+      <a href="https://api.whatsapp.com/send?phone=5541999426478&text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20de%20seguidores%20TikTok.%20Meu%20nome%20%C3%A9%20%F0%9F%91%A8.%20Meu%20@%20%C3%A9%20%F0%9F%93%A7.%20Meu%20CPF%20%C3%A9%20%F0%9F%93%9D." target="_blank" rel="noopener noreferrer" class="btn">Fazer pedido</a>
+    </section>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/compraseguidoresof?igsh=aWlkaTVrbmsxZ215" target="_blank" rel="noopener noreferrer"><span>📸</span> Instagram
+      </a>
+      <a href="https://tiktok.com/@aqui.monetize" target="_blank" rel="noopener noreferrer">
+        <span>🎵</span> TikTok
+      </a>
     </div>
   </main>
 
-  <a class="whatsapp-float" href="https://api.whatsapp.com/send?phone=5541999426478&text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20de%20seguidores.%20Meu%20nome%20%C3%A9:%20%F0%9F%91%A8%20Meu%20@%20%C3%A9:%20%F0%9F%93%A7%20Meu%20CPF%20%C3%A9:%20%F0%9F%93%9D" target="_blank">🟢</a>
+  <a href="https://api.whatsapp.com/send?phone=5541999426478&text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20de%20seguidores.%20Meu%20nome%20%C3%A9%20%F0%9F%91%A8.%20Meu%20@%20%C3%A9%20%F0%9F%93%A7.%20Meu%20CPF%20%C3%A9%20%F0%9F%93%9D." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">🟢</a>
+
 </body>
 </html>
