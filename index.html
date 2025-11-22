@@ -2,161 +2,122 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aqui.Monetize</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aqui.monetize</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f7f7f7;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f9;
       color: #333;
     }
 
     header {
-      background: #6a0dad;
+      background-color: #111827;
       color: white;
+      padding: 20px;
       text-align: center;
-      padding: 15px 0;
       font-size: 24px;
       font-weight: bold;
     }
 
-    .container {
-      padding: 20px;
-      max-width: 700px;
-      margin: auto;
+    main {
+      text-align: center;
+      padding: 40px 20px;
     }
 
-    .section-title {
-      margin-top: 30px;
-      font-size: 20px;
-      color: #6a0dad;
+    .section {
+      margin-bottom: 40px;
     }
 
-    .plan {
-      display: flex;
-      justify-content: space-between;
-      background: white;
-      padding: 10px;border: 1px solid #ccc;
-      margin: 5px 0;
-      border-radius: 8px;
+    .section h2 {
+      margin-bottom: 15px;
+      font-size: 22px;
+      color: #111827;
+    }
+
+    .preco {
+      margin: 8px 0;
+      font-size: 18px;
     }
 
     .btn {
-      background: #6a0dad;
+      display: inline-block;
+      margin: 12px;
+      padding: 12px 20px;
+      background-color: #10b981;
       color: white;
       border: none;
-      padding: 8px 15px;
-      cursor: pointer;
-      border-radius: 5px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
     }
 
-    form {
-      margin-top: 30px;
-      background: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    .btn:hover {background-color: #059669;
     }
 
-    input {
-      width: 100%;
-      padding: 8px;
-      margin: 5px 0 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+    .icon-links a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #374151;
+      font-size: 18px;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
 
-    .whatsapp-button {
+    .icon-links a:hover {
+      color: #10b981;
+    }
+
+    .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: #25D366;
+      background-color: #25d366;
       color: white;
       border-radius: 50%;
-      width: 60px;
-      height: 60px;
+      width: 55px;
+      height: 55px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 30px;
       text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      font-size: 26px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
-    footer {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 14px;
-    }
-
-    .socials a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #6a0dad;
-      font-weight: bold;
+    @media (max-width: 600px) {
+      .btn {
+        width: 80%;
+      }
     }
   </style>
 </head>
 <body>
   <header>aqui.monetize</header>
-  <div class="container">
 
-    <div class="section-title">Instagram</div><div class="plan">100 seguidores – R3,99 <button class="btn" onclick="fillOrder('Instagram', '100 seguidores', '3,99')">Fazer pedido</button></div>
-    <div class="plan">300 seguidores – R10,00 <button class="btn" onclick="fillOrder('Instagram', '300 seguidores', '10,00')">Fazer pedido</button></div>
-    <div class="plan">500 seguidores – R15,00 <button class="btn" onclick="fillOrder('Instagram', '500 seguidores', '15,00')">Fazer pedido</button></div>
-    <p>Acima de 1.000 seguidores: entre em contato pelo WhatsApp</p>
-
-    <div class="section-title">TikTok</div>
-    <div class="plan">100 seguidores – R3,99 <button class="btn" onclick="fillOrder('TikTok', '100 seguidores', '3,99')">Fazer pedido</button></div>
-    <div class="plan">300 seguidores – R9,00 <button class="btn" onclick="fillOrder('TikTok', '300 seguidores', '9,00')">Fazer pedido</button></div>
-    <div class="plan">500 seguidores – R12,50 <button class="btn" onclick="fillOrder('TikTok', '500 seguidores', '12,50')">Fazer pedido</button></div>
-    <p>Mais seguidores ou outras redes? Fale no WhatsApp.</p>
-
-    <form id="orderForm">
-      <h3>Preencha seu pedido:</h3>
-      <input type="text" id="nome" placeholder="Seu nome" required /><input type="text" id="arroba" placeholder="Seu @ (Instagram ou TikTok)" required />
-      <input type="text" id="cpf" placeholder="Seu CPF" required />
-      <input type="hidden" id="plataforma" />
-      <input type="hidden" id="pacote" />
-      <input type="hidden" id="preco" />
-      <button type="submit" class="btn">Finalizar pedido</button>
-    </form>
-
-    <div class="section-title">Siga a gente nas redes sociais:</div>
-    <div class="socials">
-      <a href="https://www.instagram.com/compraseguidoresof" target="_blank">Instagram</a>
-      <a href="https://tiktok.com/@aqui.monetize" target="_blank">TikTok</a>
+  <main>
+    <div class="section">
+      <h2>Instagram</h2>
+      <div class="preco">Tantos seguidores - R3,99</div>
+      <div class="preco">Tantos seguidores - R10,00</div>
+      <div class="preco">Tantos seguidores - R$15,00</div>
+      <div class="preco">Acima de mil? Fale conosco no WhatsApp!</div><div class="preco">Tantos seguidores - R9,00</div>
+      <div class="preco">Tantos seguidores - R12,50</div>
+      <div class="preco">Mais seguidores ou outras redes? Fale no WhatsApp!</div>
+      <a href="https://api.whatsapp.com/send?phone=5541999426478&text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20de%20seguidores%20no%20TikTok.%20Meu%20nome%20%C3%A9:%20%F0%9F%91%A8%20Meu%20@%20%C3%A9:%20%F0%9F%93%A7%20Meu%20CPF%20%C3%A9:%20%F0%9F%93%9D" class="btn" target="_blank">Fazer pedido TikTok</a>
     </div>
 
-    <footer>&copy; 2025 aqui.monetize</footer>
-  </div>
+    <div class="section">
+      <h2>Siga nossas redes sociais</h2>
+      <div class="icon-links">
+        <a href="https://www.instagram.com/compraseguidoresof?igsh=aWlkaTVrbmsxZ215" target="_blank">Instagram</a>
+        <a href="https://tiktok.com/@aqui.monetize" target="_blank">TikTok</a>
+      </div>
+    </div>
+  </main>
 
-  <a class="whatsapp-button" href="https://api.whatsapp.com/send?phone=5541999426478&text=Oi!%20Quero%20saber%20sobre%20seguidores" target="_blank">📱</a>
-
-  <script>
-    function fillOrder(plataforma, pacote, preco) {
-      document.getElementById("plataforma").value = plataforma;
-      document.getElementById("pacote").value = pacote;
-      document.getElementById("preco").value = preco;
-      window.scrollTo({ top: document.getElementById("orderForm").offsetTop, behavior: 'smooth' });
-    }
-
-    document.getElementById("orderForm").addEventListener("submit", function(e) {e.preventDefault();
-      const nome = document.getElementById("nome").value;
-      const arroba = document.getElementById("arroba").value;
-      const cpf = document.getElementById("cpf").value;
-      const plataforma = document.getElementById("plataforma").value;
-      const pacote = document.getElementById("pacote").value;
-      const preco = document.getElementById("preco").value;
-
-      const msg = `Pedido de seguidores:%0APlataforma: plataforma{pacote} – R
-    
-{preco}%0ANome: nome{arroba}%0ACPF: cpf`;
-      const url = `https://api.whatsapp.com/send?phone=5541999426478   text={msg}`;
-      window.open(url, "_blank");
-    });
-  </script>
+  <a class="whatsapp-float" href="https://api.whatsapp.com/send?phone=5541999426478&text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido%20de%20seguidores.%20Meu%20nome%20%C3%A9:%20%F0%9F%91%A8%20Meu%20@%20%C3%A9:%20%F0%9F%93%A7%20Meu%20CPF%20%C3%A9:%20%F0%9F%93%9D" target="_blank">🟢</a>
 </body>
 </html>
